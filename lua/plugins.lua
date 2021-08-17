@@ -1,4 +1,5 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- Run `PackerSync` whenever you make changes to your plugin configuration
 
 -- Auto-install packer in case it hasn't been installed.
 local execute = vim.api.nvim_command
