@@ -91,3 +91,7 @@ set termguicolors
 " Set debugger icon width to 2
 set signcolumn=auto:2
 
+" Use OSX clipboard to copy and to paste
+if g:is_mac
+  set clipboard+=unnamedplus
+endif
