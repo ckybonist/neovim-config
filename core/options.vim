@@ -91,7 +91,16 @@ set termguicolors
 " Set debugger icon width to 2
 set signcolumn=auto:2
 
+" Suppress appending <PasteStart> and <PasteEnd> when pasting
+set t_BE=
+
 " Use OSX clipboard to copy and to paste
 if g:is_mac
   set clipboard+=unnamedplus
 endif
+
+" incremental substitution (neovim)
+if has('nvim')
+  set inccommand=split
+endif
+

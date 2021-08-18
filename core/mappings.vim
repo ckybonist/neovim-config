@@ -142,3 +142,6 @@ endfunction
 autocmd FileType defx call s:nvn_defx_settings()
 nnoremap <silent><leader>ef <cmd>call CreateCenteredDefxWindow(v:true)<CR>
 
+" Select all
+nmap <C-a> gg<S-v>G
+
