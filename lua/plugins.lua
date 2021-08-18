@@ -25,6 +25,7 @@ require('packer').startup(
     -- lsp UI plugin
     use {'glepnir/lspsaga.nvim', config=[[require('config.lspsaga')]]}
     use {'folke/lsp-colors.nvim', config=[[require('config.lsp-colors')]]}
+    use {'kyazdani42/nvim-web-devicons', config=[[require('config.web-devicons')]]}
 
     if vim.g.is_mac or vim.g.is_linux then
       use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = [[require('config.treesitter')]]}
