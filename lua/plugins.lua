@@ -22,6 +22,10 @@ require('packer').startup(
     -- auto-completion engine
     use { 'hrsh7th/nvim-compe', event = 'InsertEnter *', config = [[require('config.compe')]] }
 
+    -- lsp UI plugin
+    use {'glepnir/lspsaga.nvim', config=[[require('config.lspsaga')]]}
+    use {'folke/lsp-colors.nvim', config=[[require('config.lsp-colors')]]}
+
     if vim.g.is_mac or vim.g.is_linux then
       use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = [[require('config.treesitter')]]}
     end
@@ -38,13 +42,16 @@ require('packer').startup(
     use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}, config = [[require('config.telescope')]]}
 
     -- Files browser
-    use { 'Shougo/defx.nvim', cmd='UpdateRemotePlugins' }
+    use { 'Shougo/defx.nvim', cmd = 'UpdateRemotePlugins' }
 
     -- Auto format tools
     use {'sbdchd/neoformat', cmd = {'Neoformat' }}
 
-    -- Git command inside vim
-    use {'tpope/vim-fugitive', event = 'User InGitRepo'}
+    -- Git 
+    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = [[require('config.gitsigns')]]}
+
+    -- Comment
+    use {'b3nj5m1n/kommentary', config=[[require('config.kommentary')]]}
   end
 )
 
