@@ -53,6 +53,9 @@ require('packer').startup(
 
     -- Comment
     use {'b3nj5m1n/kommentary', config=[[require('config.kommentary')]]}
+
+    -- Tabline plugin
+    use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}, config = [[require('config.barbar')]]}
   end
 )
 
