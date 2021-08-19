@@ -34,6 +34,7 @@ require('packer').startup(
      -- A list of colorscheme plugin
     use 'lifepillar/vim-solarized8'
     use 'shaunsingh/nord.nvim'
+    use 'sainnhe/everforest'
 
     -- colorful status line and theme
     use 'vim-airline/vim-airline-themes'
