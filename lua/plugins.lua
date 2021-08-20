@@ -57,6 +57,9 @@ require('packer').startup(
 
     -- Tabline plugin
     use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}, config = [[require('config.barbar')]]}
+
+    -- Symbol tree
+    use 'simrat39/symbols-outline.nvim'
   end
 )
 
