@@ -16,4 +16,5 @@ vim.api.nvim_set_keymap('n', '<Leader>k', '<Cmd>Lspsaga preview_definition<CR>',
 vim.api.nvim_set_keymap('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.api.nvim_set_keymap('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gh', '<Cmd>Lspsaga lsp_finder<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Leader>gr', '<Cmd>Lspsaga rename<CR>', opts)
 
