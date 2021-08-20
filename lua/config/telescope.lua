@@ -1,8 +1,27 @@
 -- nvim-telescope
+require('telescope').setup {
+  defaults = {
+    file_ignore_patterns = {
+      '%.png',
+      '%.jpg',
+      '%.jpeg',
+      '%.svg',
+      '%.gif',
+      '%.heic',
+      '%.webp'
+    }
+  }
+}
+
+-- Mappings
 local compe_map_opts = {noremap = true, silent = true}
 
 function cmd_str(cmd)
-  return string.gsub([[<cmd>lua require('telescope.builtin').$cmd()<cr>]], '$cmd', cmd)
+  return string.gsub(
+    [[<cmd>lua require('telescope.builtin').$cmd(require('telescope.themes').get_dropdown({}))<cr>]],
+    '$cmd',
+    cmd
+  )
 end
 
 vim.api.nvim_set_keymap('n', '<leader>ff', cmd_str('find_files'), compe_map_opts)
