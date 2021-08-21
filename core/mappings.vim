@@ -143,5 +143,12 @@ autocmd FileType defx call s:nvn_defx_settings()
 nnoremap <silent><leader>ef <cmd>call CreateCenteredDefxWindow(v:true)<CR>
 
 " Select all
-nmap <C-a> gg<S-v>G
+nnoremap <C-a> gg<S-v>G
+
+" Copy whole line
+nnoremap Y y$
+
+" Moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
