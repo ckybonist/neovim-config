@@ -43,9 +43,6 @@ require('packer').startup(
     -- Fuzzy files finder
     use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}, config = [[require('config.telescope')]]}
 
-    -- Files browser
-    use { 'Shougo/defx.nvim', cmd = 'UpdateRemotePlugins' }
-
     -- Auto format tools
     use {'sbdchd/neoformat', cmd = {'Neoformat' }}
 
