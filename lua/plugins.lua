@@ -16,13 +16,11 @@ require('packer').startup(
   function()
     use 'wbthomason/packer.nvim'
 
-    -- nvim-lsp configuration
     use {'neovim/nvim-lspconfig', config = [[require('config.lsp')]]}
 
     -- auto-completion engine
     use { 'hrsh7th/nvim-compe', event = 'InsertEnter *', config = [[require('config.compe')]] }
 
-    -- lsp UI plugin
     use {'glepnir/lspsaga.nvim', config=[[require('config.lspsaga')]]}
     use {'folke/lsp-colors.nvim', config=[[require('config.lsp-colors')]]}
     use {'kyazdani42/nvim-web-devicons', config=[[require('config.web-devicons')]]}
@@ -31,32 +29,27 @@ require('packer').startup(
       use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = [[require('config.treesitter')]]}
     end
 
-     -- A list of colorscheme plugin
     use 'lifepillar/vim-solarized8'
     use 'shaunsingh/nord.nvim'
     use 'sainnhe/everforest'
 
-    -- colorful status line and theme
     use 'vim-airline/vim-airline-themes'
     use 'vim-airline/vim-airline'
 
-    -- Fuzzy files finder
     use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}, config = [[require('config.telescope')]]}
 
-    -- Auto format tools
-    use {'sbdchd/neoformat', cmd = {'Neoformat' }}
-
     -- Git 
-    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = [[require('config.gitsigns')]]}
+    use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = [[require('config.gitsigns')]] }
 
     -- Comment
-    use {'b3nj5m1n/kommentary', config=[[require('config.kommentary')]]}
+    use { 'b3nj5m1n/kommentary', config=[[require('config.kommentary')]]}
 
     -- Tabline plugin
-    use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}, config = [[require('config.barbar')]]}
+    use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}, config = [[require('config.barbar')]] }
 
-    -- Symbol tree
     use 'simrat39/symbols-outline.nvim'
+
+    use { 'windwp/nvim-autopairs', config = [[require('config.autopairs')]] }
   end
 )
 
