@@ -16,3 +16,6 @@ set lazyredraw
 
 " Set cursor line color on visual mode
 highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey30
+
+" Set transparent background
+"highlight Normal guibg=none
