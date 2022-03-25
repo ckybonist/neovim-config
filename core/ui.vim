@@ -7,7 +7,7 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
 
-  colorscheme everforest
+  colorscheme solarized8
 endif
 
 
