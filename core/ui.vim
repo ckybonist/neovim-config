@@ -1,5 +1,7 @@
 " true color
 if exists("&termguicolors") && exists("&winblend")
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
   syntax enable
   set termguicolors
   set winblend=0
@@ -7,7 +9,7 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
 
-  colorscheme solarized8
+  colorscheme gruvbox
 endif
 
 
