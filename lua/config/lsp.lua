@@ -63,18 +63,10 @@ local on_attach = function(client, bufnr)
   }
 end
 
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches.
--- List of language server could be found at: https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#html
-local servers = { 'solargraph', 'tsserver', 'html', 'cssls' }
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
-  }
-end
+require'lspconfig'.solargraph.setup{
+  formatting = false,
+}
+
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

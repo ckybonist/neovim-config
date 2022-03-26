@@ -21,7 +21,7 @@ require('packer').startup(
     -- auto-completion engine
     use { 'hrsh7th/nvim-compe', event = 'InsertEnter *', config = [[require('config.compe')]] }
 
-    use {'glepnir/lspsaga.nvim', config=[[require('config.lspsaga')]]}
+    --use {'glepnir/lspsaga.nvim', config=[[require('config.lspsaga')]]}
     use {'folke/lsp-colors.nvim', config=[[require('config.lsp-colors')]]}
     use {'kyazdani42/nvim-web-devicons', config=[[require('config.web-devicons')]]}
 
@@ -32,6 +32,7 @@ require('packer').startup(
     use 'lifepillar/vim-solarized8'
     use 'shaunsingh/nord.nvim'
     use 'sainnhe/everforest'
+    use 'morhetz/gruvbox'
 
     use 'vim-airline/vim-airline-themes'
     use 'vim-airline/vim-airline'
